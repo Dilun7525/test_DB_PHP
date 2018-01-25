@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dilun
- * Date: 02.01.18
- * Time: 18:28
- */
 
 class C_Error_404 extends C_Base
 {

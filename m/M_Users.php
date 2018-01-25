@@ -7,15 +7,13 @@ class M_Users
 {
 	private static $instance;   // экземпляр класса
 	private $driverDB;          // драйвер БД
-	private $sid;               // идентификатор текущей сессии
-	private $uid;                // идентификатор текущего пользователя
 
-	private $authorization;        // состояние авторизации
-	private $user;                // авторизованный пользователь
+	private $authorization;     // состояние авторизации
+	private $user;              // авторизованный пользователь
 	private $idUser;            // id пользователя
-	private $trueAdmin;            // пользователь - это администратор
-	private $sortType;            //ASC или DESC
-	private $switchSorting;        //true или false
+	private $trueAdmin;         // пользователь - это администратор
+	private $sortType;          //ASC или DESC
+	private $switchSorting;     //true или false
 
 
 	public static function getInstance()
@@ -50,7 +48,6 @@ class M_Users
 			: null;
 
 	}
-
 
 	public function validateRegistrationForm()
 	{
@@ -145,7 +142,6 @@ class M_Users
 		}
 
 	}
-
 
 	public function getUser($valueField, $searchField = "id")
 	{
