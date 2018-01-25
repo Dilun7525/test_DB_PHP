@@ -2,6 +2,13 @@
 	min-width: 700px;
 }
 
+header, footer {
+	margin: 5px 0;
+	padding: 5px 10px;
+	min-height: 30px;
+	border: 1px solid;
+}
+
 .inputError {
 	margin: 5px 0;
 	color: red;

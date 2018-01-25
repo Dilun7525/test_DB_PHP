@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . PATH_TEMPLATE . 'setup_head.php'; ?>
 		</div>
 		<div class="col">
 			<div class="row justify-content-end align-items-center">
-				<a href="/home/show_profile/<?= $id ?>">
+				<a href="/home/edit_profile/<?= $id ?>">
 					<?= $login ?>
 				</a>
 
