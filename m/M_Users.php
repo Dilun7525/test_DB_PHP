@@ -200,6 +200,24 @@ class M_Users
 		return (!empty($result[0])) ? $result[0]["id"] : null;
 	}
 
+	public function getAllRole()
+	{
+		$query = "SELECT role FROM role";
+		$result = $this->driverDB->Select($query);
+		$clearResult=[];
+		if (!empty($result)){
+			foreach ($result as $value){
+				$clearResult[]=$value["role"];
+			}
+			return  $clearResult;
+		}else{
+			return null;
+		}
+
+
+
+	}
+
 	public function editProfile($formParameters)
 	{
 		$id = $formParameters["id"];

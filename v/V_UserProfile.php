@@ -66,17 +66,27 @@ require_once $_SERVER['DOCUMENT_ROOT'] . PATH_TEMPLATE . 'setup_head.php';
 			</div>
 
 			<?php if($trueAdmin): ?>
+
 				<div class="form-group">
-					<label for="role">Роль</label>
-					<input type="text"
-						   class="form-control"
-						   id="role"
-						   name="role"
-						   value="<?= $role ?>">
+					<label for="role">Example select</label>
+					<select class="form-control"
+							id="role"
+							name="role">
+						<?php foreach ($roles as $value): ?>
+							<option
+								<?php if($value===$role): ?>
+									selected
+							    <?php endif; ?>
+							><?= $value ?></option>
+						<?php endforeach; ?>
+					</select>
 				</div>
+
+
 				<div class="form-group">
-					<p>Правка и создание происходит через одну и ту же форму</p>
-					<p>Для создания замените данные</p>
+					<p>Правка и создание происходит <br/>через одну и ту же
+						форму.<br/>Для создания замените данные.
+					</p>
 				</div>
 			<?php endif; ?>
 			<?php if($trueAdmin || $selfIdUsers): ?>
