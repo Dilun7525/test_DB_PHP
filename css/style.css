@@ -38,7 +38,7 @@ header, footer {
 .tbody-hover a {
 	color: #FFFFFF;
 }
-.tbody-hover a:link {
+body a:link {
 	text-decoration: none;
 
 }
