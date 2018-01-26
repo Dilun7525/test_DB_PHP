@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Янв 25 2018 г., 19:18
+-- Время создания: Янв 26 2018 г., 09:59
 -- Версия сервера: 10.1.29-MariaDB
 -- Версия PHP: 7.2.0
 
@@ -38,6 +38,7 @@ CREATE TABLE `role` (
 --
 
 INSERT INTO `role` (`id`, `role`) VALUES
+(3, 'test'),
 (1, 'администратор'),
 (2, 'пользователь');
 
@@ -64,9 +65,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `login`, `pass`, `email`, `surname`, `first_name`, `middle_name`, `role`) VALUES
 (1, 'admin', '123456', 'admin@admin.ru', 'Админов', 'Админ', 'Админович', 1),
-(2, 'user123', '123456', 'user@user.ru', 'администратор', 'Юзер', 'Юзерович', 2),
-(7, 'testPro', '123456', 'testPro@testPro.ru', 'testPro', 'testPro', 'testPro', 1),
-(8, 'test2', '123456', 'test@test.ru', 'Тестов', 'Тест', 'Тестович', 2);
+(2, 'user12345', '123456', 'user@user.ru', 'администратор', 'Юзер', 'Юзерович', 2),
+(7, 'testPro', '123456', 'testPro@testPro.ru', 'testPro', 'testPro', 'testPro', 2),
+(8, 'test2', '123456', 'test@test.ru', 'Тестов', 'Тест', 'Тестович', 2),
+(9, 'admin2', '123456', 'admin2@admin2.ru', 'Админов2', 'Админ2', 'Админович2', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -94,13 +96,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `role`
 --
 ALTER TABLE `role`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
