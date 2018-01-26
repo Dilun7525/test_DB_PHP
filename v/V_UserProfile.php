@@ -68,7 +68,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . PATH_TEMPLATE . 'setup_head.php';
 			<?php if($trueAdmin): ?>
 
 				<div class="form-group">
-					<label for="role">Example select</label>
+					<label for="role">Роль</label>
 					<select class="form-control"
 							id="role"
 							name="role">
