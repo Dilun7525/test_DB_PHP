@@ -197,13 +197,13 @@ class M_Users
 		$format = "SELECT id FROM role WHERE role = '%s'";
 		$query = sprintf($format, $valueField);
 		$result = $this->driverDB->Select($query);
-		return (!empty($result)) ? $result[0]["id"] : null;
+		return (!empty($result[0])) ? $result[0]["id"] : null;
 	}
 
 	public function editProfile($formParameters)
 	{
 		$id = $formParameters["id"];
-		$role = (!empty($formParameters["role"]))
+		$role = ($this->getIdRole($formParameters["role"]))
 			? $this->getIdRole($formParameters["role"])
 			: $this->getIdRole("пользователь");
 
